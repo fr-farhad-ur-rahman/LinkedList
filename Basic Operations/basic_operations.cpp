@@ -22,39 +22,6 @@ public:
     LinkedList() : head(nullptr) {}
 
     // Method to insert a new node at the head of the list
-    void insertAtHead(T data);
-
-    // Method to insert a new node at the tail of the list
-    void insertAtTail(T data);
-
-    // Method to insert a new node at a specific position in the list
-    void insertAtSpecificPosition(T data, int position);
-
-    // Method to update the data at a specific position in the list
-    void updateAtPosition(T data, int position);
-
-    // Method to delete the node at the head of the list
-    void deleteAtHead();
-
-    // Method to delete the node at the tail of the list
-    void deleteAtTail();
-
-    // Method to delete the node at a specific position in the list
-    void deleteAtPosition(int pos);
-
-    // Method to search for an element in the list
-    int search(T data);
-
-    // Method to get the length of the linked list
-    int length();
-
-    // Method to reverse the linked list
-    void reverse();
-
-    // Method to display the elements of the list.
-    void display();
-
-    // Method to insert a new node at the head of the list
     void insertAtHead(T data){
         // Create a new node with given data
         Node<T> *new_node = new Node<T>(data);
