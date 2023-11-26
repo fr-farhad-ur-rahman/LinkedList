@@ -1,18 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Node
-{
+class Node{
 public:
     int data;
-    Node *current;
-    Node *prev;
     Node *next;
 
-    Node(int data)
-    {
+    Node(int data){
         this->data = data;
         this->next = nullptr;
+
     }
 };
 
@@ -58,9 +55,9 @@ public:
 
     void reverse(){
         // create three pointers
-        Node * prev; Node * next;
-        prev = next = nullptr;
         Node* current = head;
+        Node* prev = nullptr;
+        Node* next = nullptr;
 
         while(current != nullptr){
             next = current -> next;
@@ -68,7 +65,6 @@ public:
             prev = current;
             current = next;
         }
-
         head = prev;
     }
 };
@@ -84,4 +80,6 @@ int main(){
     ll.display();
     ll.reverse();
     ll.display();
+
+    return 0;
 }
