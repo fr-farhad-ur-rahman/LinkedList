@@ -58,6 +58,7 @@ public:
         // If the head is nullptr, make the new node the head.
         if (position == 0){
             head = newNode;
+            return;
         }
         // Iterator
         Node<T> *current = head;
@@ -65,7 +66,7 @@ public:
         // 0-index based linked list.
         int current_pos = 0;
         // Iterate until we come across our specific node.
-        while (current_pos != position - 1){
+        while (current_pos != position - 1 && current != nullptr){
             current = current->next;
             current_pos++;
         }
