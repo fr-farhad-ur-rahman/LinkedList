@@ -69,4 +69,6 @@ int main(){
     dll.display();
     dll.reverse();
     dll.display();
+
+    return 0;
 }
